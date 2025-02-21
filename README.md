@@ -1,5 +1,6 @@
 # 🚀 Home Assistant Konfiguration
 [![Sponsor](https://img.shields.io/badge/GitHub-Sponsor-ff69b4?style=flat&logo=github)](https://github.com/sponsors/cedric-2002)
+
 Willkommen in meiner **Home Assistant** Konfiguration! Hier findest du meine YAML-Dateien für Sensoren, Automatisierungen, Lovelace-Dashboards und mehr.
 
 ---

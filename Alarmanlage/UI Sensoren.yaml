@@ -1,0 +1,12 @@
+type: tile
+entity: binary_sensor.eve_door_20ebn9901_tur #Entität muss angepasst werden
+card_mod:
+  style: |
+    :host {
+      --ha-card-background: {% if is_state(config.entity, 'on') %} red {% else %} lightgreen {% endif %} !important;
+      --primary-text-color: black !important;
+      --secondary-text-color: black !important;
+    }
+    ha-state-icon {
+      color: black !important;
+    }

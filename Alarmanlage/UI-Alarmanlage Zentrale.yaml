@@ -1,0 +1,28 @@
+# Dies ist die UI.yaml von meiner Zentrale mit dem Nummernfeld 
+type: alarm-panel
+entity: alarm_control_panel.alarmo
+name: Alarmanlage
+states:
+  - arm_home
+  - arm_away
+  - arm_night
+  - arm_vacation
+grid_options:
+  columns: 12
+  rows: 8
+card_mod:
+  style: |
+    ha-card {
+      border: 4px solid 
+        {% if is_state(config.entity, 'disarmed') %} lightgreen   /* Deaktiviert → Grüner Rand */
+        {% elif is_state(config.entity, 'armed_home') %} blue   /* Zuhause scharf → Blauer Rand */
+        {% elif is_state(config.entity, 'armed_away') %} red   /* Abwesend scharf → Roter Rand */
+        {% elif is_state(config.entity, 'armed_night') %} purple   /* Nachtscharf → Lila Rand */
+        {% elif is_state(config.entity, 'armed_vacation') %} orange   /* Urlaub → Oranger Rand */
+        {% elif is_state(config.entity, 'pending') or is_state(config.entity, 'arming') %} yellow   /* Wird aktiviert → Gelber Rand */
+        {% elif is_state(config.entity, 'triggered') %} darkred   /* Alarm ausgelöst → Dunkelroter Rand */
+        {% else %} gray {% endif %} !important;
+      
+      border-radius: 12px;  /* Abgerundete Ecken für schöneres Design */
+      padding: 8px;  /* Etwas Abstand, damit der Rand gut sichtbar bleibt */
+    }

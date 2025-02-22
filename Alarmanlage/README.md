@@ -1,7 +1,6 @@
 Ich habe in Homeassistant Alarmo eingebunden um eine Alarmanlage zu haben um mein Haus immer im Blick zu halten
 
 Alarmo kann über Hacs heruntergeladen werden
-
 ---
 Die Alarmanlage habe ich bei mir in verschiedenen Farben aufgeteilt um auch auf meinem Handy Dashboard zu sehen und zu wissen ob und welcher Modus gerade aktiv ist
 

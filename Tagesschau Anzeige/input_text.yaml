@@ -1,0 +1,131 @@
+#Tagesschau Anzeige 
+#(Aufgeteilt da input_text maximale Anzahl hat von Zeichen, wenn man alles in einer hat geht es nicht)
+tagesschau_titel_1:
+  name: Titel 1
+  max: 255
+tagesschau_beschreibung_1:
+  name: Beschreibung 1
+  max: 10000
+tagesschau_link_1:
+  name: Link 1
+  max: 255
+tagesschau_bild_1:
+  name: Bild 1
+  max: 255
+
+tagesschau_titel_2:
+  name: Titel 2
+  max: 255
+tagesschau_beschreibung_2:
+  name: Beschreibung 2
+  max: 10000
+tagesschau_link_2:
+  name: Link 2
+  max: 255
+tagesschau_bild_2:
+  name: Bild 2
+  max: 255
+
+tagesschau_titel_3:
+  name: Titel 3
+  max: 255
+tagesschau_beschreibung_3:
+  name: Beschreibung 3
+  max: 10000
+tagesschau_link_3:
+  name: Link 3
+  max: 255
+tagesschau_bild_3:
+  name: Bild 3
+  max: 255
+
+tagesschau_titel_4:
+  name: Titel 4
+  max: 255
+tagesschau_beschreibung_4:
+  name: Beschreibung 4
+  max: 10000
+tagesschau_link_4:
+  name: Link 4
+  max: 255
+tagesschau_bild_4:
+  name: Bild 4
+  max: 255
+
+tagesschau_titel_5:
+  name: Titel 5
+  max: 255
+tagesschau_beschreibung_5:
+  name: Beschreibung 5
+  max: 10000
+tagesschau_link_5:
+  name: Link 5
+  max: 255
+tagesschau_bild_5:
+  name: Bild 5
+  max: 255
+
+tagesschau_titel_6:
+  name: Titel 6
+  max: 255
+tagesschau_beschreibung_6:
+  name: Beschreibung 6
+  max: 10000
+tagesschau_link_6:
+  name: Link 6
+  max: 255
+tagesschau_bild_6:
+  name: Bild 6
+  max: 255
+
+tagesschau_titel_7:
+  name: Titel 7
+  max: 255
+tagesschau_beschreibung_7:
+  name: Beschreibung 7
+  max: 10000
+tagesschau_link_7:
+  name: Link 7
+  max: 255
+tagesschau_bild_7:
+  name: Bild 7
+  max: 255
+
+tagesschau_titel_8:
+  name: Titel 8
+  max: 255
+tagesschau_beschreibung_8:
+  name: Beschreibung 8
+  max: 10000
+tagesschau_link_8:
+  name: Link 8
+  max: 255
+tagesschau_bild_8:
+  name: Bild 8
+  max: 255
+
+tagesschau_titel_9:
+  name: Titel 9
+  max: 255
+tagesschau_beschreibung_9:
+  name: Beschreibung 9
+  max: 10000
+tagesschau_link_9:
+  name: Link 9
+  max: 255
+tagesschau_bild_9:
+  name: Bild 9
+  max: 255
+
+tagesschau_titel_10:
+  name: Titel 10
+  max: 255
+tagesschau_beschreibung_10:
+  name: Beschreibung 10
+  max: 10000
+tagesschau_link_10:
+  name: Link 10
+  max: 255
+tagesschau_bild_10:
+  name: Bild 10
+  max: 255

@@ -1,0 +1,12 @@
+#Wenn noch nicht vorhanden einzeln hinzufügen bzw. abändern ja nach Name
+default_config:
+automation: !include automations.yaml
+input_text: !include input_text.yaml
+
+#Tagesschau feedreader
+feedreader:
+  urls:
+    - https://www.tagesschau.de/xml/rss2
+  scan_interval: 300 #Aktualisierung alle 30 Minuten kann angepasst werden
+  max_entries: 10 #Maximale Einträge
+  input_text: true

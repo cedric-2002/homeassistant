@@ -1,0 +1,119 @@
+type: custom:swipe-card
+parameters:
+  autoplay:
+    delay: 5000
+  speed: 800
+# Pagination kann bei Bedarf abgezeigt werden
+#  pagnination:
+#    type: bullets 
+#    clickable: true
+#  navigation: true
+cards:
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_1') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_1') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_1') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_1') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_2') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_2') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_2') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_2') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_3') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_3') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_3') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_3') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_4') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_4') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_4') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_4') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_5') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_5') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_5') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_5') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_6') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_6') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_6') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_6') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_7') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_7') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_7') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_7') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_8') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_8') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_8') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_8') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_9') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_9') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_9') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_9') | default('#') }})
+  - type: markdown
+    content: >
+      ### {{ states('input_text.tagesschau_titel_10') | replace('None', 'Keine
+      Nachricht verfügbar') }}   ![Bild]({{
+      states('input_text.tagesschau_bild_10') |
+      default('https://via.placeholder.com/150') }})   {{
+      states('input_text.tagesschau_beschreibung_10') | replace('None', 'Keine
+      Beschreibung verfügbar') }}   [Mehr lesen]({{
+      states('input_text.tagesschau_link_10') | default('#') }})
+style: |
+  ha-card {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  swipe-card {
+    animation: marquee 10s linear infinite alternate !important;
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

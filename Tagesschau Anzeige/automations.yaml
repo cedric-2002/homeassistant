@@ -1,0 +1,189 @@
+#Automation Tagesschau Nachrichten
+- alias: "Speichern der letzten 10 Tagesschau Nachrichten"
+  trigger:
+    platform: event
+    event_type: feedreader  # Trigger für neue Tagesschau-Nachrichten
+  action:
+    - variables:
+        title: "{{ trigger.event.data.title | default('Kein Titel') }}"
+        description: "{{ trigger.event.data.description | default('Keine Beschreibung') }}"
+        link: "{{ trigger.event.data.link | default('#') }}"
+        image: "{{ trigger.event.data.content | regex_findall('src=\"(.*?)\"') | first | default('https://via.placeholder.com/150') }}"
+
+    # Debugging: Nachricht anzeigen
+    - service: persistent_notification.create
+      data:
+        title: "Debugging: Gespeicherte Nachricht"
+        message: "Titel: {{ title }}\nBeschreibung: {{ description }}\nLink: {{ link }}\nBild: {{ image }}"
+
+    # Ältere Nachrichten nach unten verschieben
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_10
+        value: "{{ states('input_text.tagesschau_titel_9') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_10
+        value: "{{ states('input_text.tagesschau_beschreibung_9') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_10
+        value: "{{ states('input_text.tagesschau_link_9') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_10
+        value: "{{ states('input_text.tagesschau_bild_9') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_9
+        value: "{{ states('input_text.tagesschau_titel_8') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_9
+        value: "{{ states('input_text.tagesschau_beschreibung_8') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_9
+        value: "{{ states('input_text.tagesschau_link_8') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_9
+        value: "{{ states('input_text.tagesschau_bild_8') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_8
+        value: "{{ states('input_text.tagesschau_titel_7') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_8
+        value: "{{ states('input_text.tagesschau_beschreibung_7') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_8
+        value: "{{ states('input_text.tagesschau_link_7') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_8
+        value: "{{ states('input_text.tagesschau_bild_7') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_7
+        value: "{{ states('input_text.tagesschau_titel_6') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_7
+        value: "{{ states('input_text.tagesschau_beschreibung_6') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_7
+        value: "{{ states('input_text.tagesschau_link_6') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_7
+        value: "{{ states('input_text.tagesschau_bild_6') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_6
+        value: "{{ states('input_text.tagesschau_titel_5') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_6
+        value: "{{ states('input_text.tagesschau_beschreibung_5') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_6
+        value: "{{ states('input_text.tagesschau_link_5') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_6
+        value: "{{ states('input_text.tagesschau_bild_5') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_5
+        value: "{{ states('input_text.tagesschau_titel_4') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_5
+        value: "{{ states('input_text.tagesschau_beschreibung_4') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_5
+        value: "{{ states('input_text.tagesschau_link_4') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_5
+        value: "{{ states('input_text.tagesschau_bild_4') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_4
+        value: "{{ states('input_text.tagesschau_titel_3') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_4
+        value: "{{ states('input_text.tagesschau_beschreibung_3') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_4
+        value: "{{ states('input_text.tagesschau_link_3') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_4
+        value: "{{ states('input_text.tagesschau_bild_3') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_3
+        value: "{{ states('input_text.tagesschau_titel_2') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_3
+        value: "{{ states('input_text.tagesschau_beschreibung_2') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_3
+        value: "{{ states('input_text.tagesschau_link_2') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_3
+        value: "{{ states('input_text.tagesschau_bild_2') }}"
+
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_2
+        value: "{{ states('input_text.tagesschau_titel_1') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_2
+        value: "{{ states('input_text.tagesschau_beschreibung_1') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_2
+        value: "{{ states('input_text.tagesschau_link_1') }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_2
+        value: "{{ states('input_text.tagesschau_bild_1') }}"
+
+    # Speichert die neue Nachricht an erster Stelle
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_titel_1
+        value: "{{ title }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_beschreibung_1
+        value: "{{ description }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_link_1
+        value: "{{ link }}"
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.tagesschau_bild_1
+        value: "{{ image }}"

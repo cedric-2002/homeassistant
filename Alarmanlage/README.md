@@ -5,11 +5,17 @@ Alarmo kann über Hacs heruntergeladen werden
 Die Alarmanlage habe ich bei mir in verschiedenen Farben aufgeteilt um auch auf meinem Handy Dashboard zu sehen und zu wissen ob und welcher Modus gerade aktiv ist
 
 grün -> Deaktiviert
+
 Zuhause scharf -> Blauer Rand
+
 Abwesend scharf -> Roter Rand
+
 Nachtmodus -> Lila Rand
+
 Urlaub -> oranger Rand
+
 wird aktiviert -> gelber Rand
+
 Alarm ausgelößt -> dunkelroter Rand
 ---
 

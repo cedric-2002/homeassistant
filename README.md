@@ -17,7 +17,7 @@ Willkommen in meiner **Home Assistant** Konfiguration! Hier findest du meine YAM
 Falls du meine Konfiguration nachbauen möchtest:
 1. **Backup von deiner HA-Installation machen! und die jeweilige README lesen**
 2. **Dateien aus diesem Repository kopieren und anpassen**
-3. **In deine Home Assistant Konfiguration einfügen **
+3. **In deine Home Assistant Konfiguration einfügen**
 4. **Home Assistant neustarten**
 5. **Genießen! 🚀**
 
